@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food Restaurant | Home</title>
+
+  <style>
+   /* NAVBAR COLOR */
+header{
+  background:#ff4d4d;
+  box-shadow:0 2px 6px rgba(0,0,0,.2);
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+
+nav h1{
+  color:#fff;
+  font-size:26px;
+}
+
+nav a{
+  margin:0 12px;
+  text-decoration:none;
+  color:#fff;
+  font-weight:600;
+}
+
+nav a:hover{
+  color:#ffecec;
+}
+
+
+    /* NAVBAR */
+    header{background:#fff;box-shadow:0 2px 6px rgba(0,0,0,.1);position:sticky;top:0;z-index:100}
+    nav{max-width:1200px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:15px}
+    nav h1{color:#ff4d4d;font-size:26px}
+    nav a{margin:0 12px;text-decoration:none;color:#333;font-weight:600}
+    nav a:hover{color:#ff4d4d}
+
+    section{padding:70px 20px}
+    .container{max-width:1200px;margin:auto}
+
+    /* HERO */
+    .hero{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:40px}
+    .hero h2{font-size:42px;margin-bottom:15px}
+    .hero h2 span{background:#4da6ff;color:#fff;padding:6px 12px;border-radius:4px}
+    .hero p{margin-bottom:25px;line-height:1.7}
+    .btn{background:#ff4d4d;color:#fff;padding:12px 28px;border:none;border-radius:5px;font-size:16px;cursor:pointer}
+    .btn:hover{opacity:.9}
+    .hero img{width:100%;border-radius:25px}
+
+    /* SPECIALITY */
+    .title{text-align:center;margin-bottom:45px;font-size:34px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
+    .card{background:#fff;border-radius:12px;box-shadow:0 6px 14px rgba(0,0,0,.08);transition:.3s}
+    .card:hover{transform:translateY(-6px)}
+    .card img{width:60px;margin-bottom:15px}
+
+    /* MENU */
+    .menu-card{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      text-align:center;
+    }
+
+    .menu-img {
+        width: 80%;
+        border-radius: 12px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .menu-card h4{
+      margin:12px 0 5px;
+    }
+
+    .price{
+      color:#27ae60;
+      font-weight:bold;
+    }
+
+    /* ORDER */
+    .order{display:grid;grid-template-columns:1fr 1fr;gap:35px}
+    .order img{width:100%;border-radius:18px}
+    form input,form textarea{width:100%;padding:11px;margin-bottom:12px;border:1px solid #ccc;border-radius:5px}
+
+    footer{text-align:center;padding:20px;background:#222;color:#fff;margin-top:40px}
+
+    @media(max-width:768px){
+      .hero,.order{grid-template-columns:1fr}
+      .hero h2{font-size:34px}
+    }
+  </style>
+ 
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header>
+  <nav>
+    <h1>🍴 Food</h1>
+    <div>
+      <a href="#home">Home</a>
+      <a href="#speciality">Speciality</a>
+      <a href="#menu">Menu</a>
+      <a href="#order">Order</a>
+      <a href="#about">About</a>
+    </div>
+  </nav>
+</header>
+
+<!-- HOME -->
+<section id="home">
+  <div class="container hero">
+    <div>
+      <h2>Food Made With Love</h2>
+      <p>Fresh, tasty and hygienic food prepared with love.</p>
+      <button class="btn">Order Now</button>
+    </div>
+    <img src="burger.png">
+  </div>
+</section>
+
+<!-- SPECIALITY -->
+<section id="speciality">
+  <h2 class="title">Our Special Dishes</h2>
+  <div class="container grid">
+    <div class="card" style="padding:30px;text-align:center">
+      <img src="https://img.icons8.com/color/96/hamburger.png">
+      <h4>Tasty Burger</h4>
+    </div>
+    <div class="card" style="padding:30px;text-align:center">
+      <img src="https://img.icons8.com/color/96/pizza.png">
+      <h4>Tasty Pizza</h4>
+    </div>
+    <div class="card" style="padding:30px;text-align:center">
+      <img src="ice.jpg">
+      <h4>Ice Cream</h4>
+    </div>
+    <div class="card" style="padding:30px;text-align:center">
+      <img src="https://img.icons8.com/color/96/cocktail.png">
+      <h4>Cold Drinks</h4>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section id="menu">
+  <h2 class="title">Popular Menu</h2>
+
+  <div class="container grid" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr))">
+
+    <!-- MENU CARD -->
+    <div class="card menu-card" style="overflow:hidden">
+      <img class="menu-img" src="pizza.jpg">
+      <div style="padding:18px;text-align:center">
+        <div style="color:#27ae60">★★★★★</div>
+        <h4>Pizza</h4>
+        <p style="font-size:14px;color:#777">Pizza is a dish of Italian origin, made with an oven-baked, flat, generally round bread that is often covered with tomatoes or a tomato-based sauce and mozzarella cheese.</p>
+        <button class="btn">Add To Cart</button>
+        <p class="price" style="margin-top:8px">₹ 100</p>
+      </div>
+    </div>
+
+    <div class="card menu-card" style="overflow:hidden">
+      <img class="menu-img" src="bur.jpg">
+      <div style="padding:18px;text-align:center">
+        <div style="color:#27ae60">★★★★★</div>
+        <h4>Burger</h4>
+        <p style="font-size:14px;color:#777">Grilled sandwich with meat.A flavourful burger features grilled paneer marinated in tikka spices, served on soft buns with fresh lettuce, cucumber, mint, and green chilli chutney, crispy sweet potato fries</p>
+        <button class="btn">Add To Cart</button>
+        <p class="price" style="margin-top:8px">₹ 80</p>
+      </div>
+    </div>
+
+    <div class="card menu-card" style="overflow:hidden">
+      <img class="menu-img" src="chocolate.jpg">
+      <div style="padding:18px;text-align:center">
+        <div style="color:#27ae60">★★★★★</div>
+        <h4>chocolate Dessert</h4>
+        <p style="font-size:14px;color:#777">Chocolate is one of the most popular food types and flavors in the world, and many foodstuffs involving chocolate exist, particularly desserts</p>
+        <button class="btn">Add To Cart</button>
+        <p class="price" style="margin-top:8px">₹ 95</p>
+      </div>
+    </div>
+    <div class="card menu-card" style="overflow:hidden">
+      <img class="menu-img" src="vanila.jpg">
+      <div style="padding:18px;text-align:center">
+        <div style="color:#27ae60">★★★★★</div>
+        <h4>vanila ice-cream</h4>
+        <p style="font-size:14px;color:#777">Vanilla ice cream is a form of chilled or partially frozen desert that is flavored with vanilla beans, which are actually not beans at all but the fruit seed pods of plants in the orchid genus Vanilla.</p>
+        <button class="btn">Add To Cart</button>
+        <p class="price" style="margin-top:8px">₹ 135</p>
+      </div>
+    </div>
+      <div class="card menu-card" style="overflow:hidden">
+      <img class="menu-img" src="pulav.jpg">
+      <div style="padding:18px;text-align:center">
+        <div style="color:#27ae60">★★★★★</div>
+        <h4>veg pulav</h4>
+        <p style="font-size:14px;color:#777">Veg pulao or Vegetable pulav which is forked from the famous meat pulao made with long grain rice, mixed vegetables, and herbs.</p>
+        <button class="btn">Add To Cart</button>
+        <p class="price" style="margin-top:8px">₹ 70</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- ABOUT -->
+<section id="about">
+  <h2 class="title">About Us</h2>
+
+  <div class="container order">
+    <img src="about.jpg" alt="About Food">
+
+    <div>
+      <h3 style="margin-bottom:15px;color:#ff4d4d">Welcome To Our Restaurant</h3>
+      <p style="line-height:1.8;color:#555">
+        We serve fresh, tasty and hygienic food made with love.  
+        Our restaurant focuses on quality ingredients, great taste,  
+        and customer satisfaction.
+      </p>
+
+      <p style="margin-top:15px;line-height:1.8;color:#555">
+        From delicious pizzas and burgers to desserts and traditional
+        meals, we ensure every dish is prepared with care and passion.
+      </p>
+
+     
+      </button>
+    </div>
+  </div>
+</section>
+
+
+<!-- ORDER -->
+<section id="order">
+  <h2 class="title">Order Now</h2>
+  <div class="container order">
+    <img src="ord.jpg">
+
+    <form id="orderForm">
+      <input type="text" placeholder="Name" name="name" required>
+      <input type="email" placeholder="Email" name="email" required>
+      <input type="text" placeholder="Food Name" name="food" required>
+      <input type="tel" placeholder="Mobile Number" name="mobile" required>
+      <textarea rows="4" placeholder="Address" name="address"></textarea>
+
+      <button class="btn" type="submit">Order Now</button>
+
+      <div id="orderMsg" style="
+        display:none;
+        margin-top:15px;
+        color:green;
+        font-weight:600;
+      ">
+        <p>✅ Order Placed Successfully!</p>
+        <p id="orderDetails"></p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <p> Food Restaurant </p>
+</footer>
+
+<script>
+  // --- Add To Cart button logic ---
+  const addToCartButtons = document.querySelectorAll('.menu-card .btn');
+  addToCartButtons.forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      const msg = document.createElement('p');
+      msg.textContent = "✅ Your order added to cart successfully!";
+      msg.style.color = "green";
+      msg.style.fontWeight = "600";
+      msg.style.marginTop = "10px";
+
+      this.parentElement.appendChild(msg);
+
+      setTimeout(() => {
+        msg.remove();
+      }, 2000);
+    });
+  });
+
+  // --- Order form logic with details ---
+  const orderForm = document.getElementById('orderForm');
+  const orderMsg = document.getElementById('orderMsg');
+  const orderDetails = document.getElementById('orderDetails');
+
+  orderForm.addEventListener('submit', function(e){
+    e.preventDefault();
+
+    // Get values
+    const name = orderForm.name.value;
+    const email = orderForm.email.value;
+    const food = orderForm.food.value;
+    const mobile = orderForm.mobile.value;
+    const address = orderForm.address.value;
+
+    // Display success message + details
+    orderMsg.style.display = 'block';
+    orderDetails.innerHTML = `
+      <strong>Order Details:</strong><br>
+      Name: ${name}<br>
+      Email: ${email}<br>
+      Food: ${food}<br>
+      Mobile: ${mobile}<br>
+      Address: ${address}
+    `;
+
+    // Reset form
+    orderForm.reset();
+
+    // Hide after 5 seconds
+    setTimeout(() => {
+      orderMsg.style.display = 'none';
+    }, 5000);
+  });
+</script>
+
+</body>
+</html>
